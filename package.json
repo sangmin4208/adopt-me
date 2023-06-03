@@ -1,0 +1,14 @@
+{
+  "name": "adopt-me",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sangmin4208/adopt-me.git",
+  "author": "SangMin <sangmin4208@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
