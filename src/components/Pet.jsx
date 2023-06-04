@@ -1,10 +1,20 @@
 const Pet = (props) => {
+  let hero = `http://pets-images.dev-apis.com/pets/none.jpg`
+  if (props.images) {
+    hero = props.images[0]
+  }
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <h2>{props.animal}</h2>
-      <h2>{props.breed}</h2>
-    </div>
+    <>
+      <a href={`/details/${props.id}`} className="pet">
+        <div className="image-container">
+          <img src={hero} alt={props.name} />
+        </div>
+        <div className="info">
+          <h1>{props.name}</h1>
+          <h2>{`${props.animal} - ${props.breed} - ${props.location}`}</h2>
+        </div>
+      </a>
+    </>
   )
 }
 
