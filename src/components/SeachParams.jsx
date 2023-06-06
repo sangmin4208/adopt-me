@@ -9,7 +9,7 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState('')
   const [breed, setBreed] = useState('')
   const [pets, setPets] = useState([])
-  const [breeds] = useBreeds(animal)
+  const { breeds, isLoading, isError } = useBreeds(animal)
 
   useEffect(() => {
     async function initialize() {
@@ -60,7 +60,11 @@ const SearchParams = () => {
         </label>
         <label>
           Breed
-          <select value={breed} onChange={(e) => setBreed(e.target.value)}>
+          <select
+            disabled={isLoading || isError}
+            value={breed}
+            onChange={(e) => setBreed(e.target.value)}
+          >
             <option />
             {breeds.map((breed) => (
               <option key={breed} value={breed}>
