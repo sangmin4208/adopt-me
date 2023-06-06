@@ -1,13 +1,14 @@
-import { createRoot } from 'react-dom/client'
-import SearchParams from './components/SeachParams'
+import { Outlet } from 'react-router-dom'
+
 const App = () => {
   return (
-    <div>
-      <h1>Adopt Me!</h1>
-      <SearchParams />
-    </div>
+    <>
+      <div>
+        <h1>Adopt Me!</h1>
+      </div>
+      <Outlet />
+    </>
   )
 }
-const container = document.getElementById('root')
-const root = createRoot(container)
-root.render(<App />)
+
+export default App
