@@ -1,14 +1,14 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
-import SearchParams from './components/SeachParams'
 import Details from './pages/Details'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from './lib/query-client'
+import App from './App'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <SearchParams />,
+    element: <App />,
   },
   {
     path: '/details/:id',
