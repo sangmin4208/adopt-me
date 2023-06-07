@@ -28,6 +28,7 @@ const Home = () => {
         setAnimal={setAnimal}
         handleSubmit={handleSubmit}
       />
+
       {isError && <h1>Error: {isError}</h1>}
       {isLoading && <h1>Loading...</h1>}
       {!isLoading && !isError && <Results pets={pets} />}
